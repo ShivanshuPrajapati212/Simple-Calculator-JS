@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(bg.jpg); /* Keep your orange background image */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 600px;
+    width: 300px; /* Slightly narrower width for a sleek look */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    display: flex;
+    flex-direction: column; /* Stack result and buttons vertically */
+    justify-content: space-between; /* Space out result and buttons */
+    align-items: center;
+    backdrop-filter: blur(15px); /* Blurred background for the calculator */
+    border-radius: 25px; /* Smooth rounded corners */
+    padding: 20px; /* Padding inside the calculator container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.result {
+    width: 100%;
+    height: 100px; /* Defined height for the result area */
+    background: transparent;
+    color: #fff;
+    font-size: 3rem; /* Large text for the result */
+    text-align: right; /* Align text to the right */
+    padding: 20px; /* Padding for some spacing inside the result area */
+    font-weight: 500;
+    overflow: auto;
+}
+
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Space between buttons */
+}
+
+.btn {
+    font-size: 1.5rem; /* Large font size for buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Consistent height for all buttons */
+    background-color: rgba(255, 165, 0, 0.7); /* Orange background color */
+    color: #fff; /* White text color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Light shadow for buttons */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 140, 0, 0.9); /* Darker orange on hover */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Slight scale down on click */
+}
+
+.btn1, .btn20 {
+    background-color: #ff4400; /* A slightly different orange for C and = buttons */
+    color: #fff; /* Ensure text is white */
+}
